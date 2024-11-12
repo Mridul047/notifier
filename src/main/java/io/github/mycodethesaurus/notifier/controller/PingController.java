@@ -29,6 +29,10 @@ public class PingController {
     } catch (UnknownHostException e) {
       return "Exception occurred while processing the request: " + e.getMessage();
     }
-    return ip + ":" + hostname;
+    return """
+      {"ip": "%s",
+      "hostname": "%s"
+      }"""
+        .formatted(ip, hostname);
   }
 }
