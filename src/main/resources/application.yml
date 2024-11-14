@@ -1,1 +1,9 @@
-spring.application.name=notifier
+spring:
+  application:
+    name: notifier
+
+server:
+  ssl:
+    certificate: server_certs/server.crt
+    certificate-private-key: server_certs/server.key
+  port: 8443
